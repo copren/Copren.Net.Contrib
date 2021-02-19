@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Copren.Unity.Net.Contrib.Peers\Copren.Unity.Net.Contrib.Peers\Copren.Unity.Net.Contrib.Peers.csproj" />
+    <ProjectReference Include="..\..\Copren.Unity.Net.Contrib.State\Copren.Unity.Net.Contrib.State\Copren.Unity.Net.Contrib.State.csproj" />
+    <ProjectReference Include="..\..\..\Copren.Unity.Net\Copren.Unity.Net.Hosting\Copren.Unity.Net.Hosting.csproj" />
+    <ProjectReference Include="..\..\..\Copren.Unity.Net\Copren.Unity.Net.Core\Copren.Unity.Net.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>Full</DebugType>
+  </PropertyGroup>
+
+</Project>

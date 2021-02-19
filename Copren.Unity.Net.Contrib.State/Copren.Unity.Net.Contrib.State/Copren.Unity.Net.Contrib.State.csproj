@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Copren.Unity.Net.Contrib.State</PackageId>
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <Authors>Austin Hanson</Authors>
+    <Company>Copren</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Copren.Unity.Net\Copren.Unity.Net.Hosting\Copren.Unity.Net.Hosting.csproj"/>
+    <ProjectReference Include="..\..\..\Copren.Unity.Net\Copren.Unity.Net.Core\Copren.Unity.Net.Core.csproj"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0"/>
+    <PackageReference Include="protobuf-net" Version="2.3.3"/>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>Full</DebugType>
+  </PropertyGroup>
+</Project>
