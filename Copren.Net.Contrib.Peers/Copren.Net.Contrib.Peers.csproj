@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>Copren.Net.Contrib.Peers</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Copren.Net.Hosting" Version="$(Copren_Net)" />
+    <PackageReference Include="Copren.Net.Core" Version="$(Copren_Net)" />
+    <PackageReference Include="protobuf-net" Version="$(ProtoBuf_Net)"/>
+  </ItemGroup>
+</Project>

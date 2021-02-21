@@ -1,0 +1,56 @@
+<Project>
+  <!-- Set the repository root into a variable -->
+  <PropertyGroup>
+    <SourceRoot>$(MSBuildThisFileDirectory)</SourceRoot>
+  </PropertyGroup>
+
+  <!-- Set common properties regarding assembly information and nuget packages -->
+  <PropertyGroup>
+    <Authors>Austin Hanson</Authors>
+    <Company>Copren</Company>
+    <Product>Copren.Net.Contrib</Product>
+    <Copyright>© Copren. All rights reserved.</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/copren/Copren.Net.Contrib</PackageProjectUrl>
+    <PackageIcon></PackageIcon>
+    <PackageTags>C# .NET Networking</PackageTags>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/copren/Copren.Net.Contrib</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <LangVersion>latest</LangVersion>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+  </PropertyGroup>
+
+  <!-- Versioning properties -->
+  <PropertyGroup>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <VersionPrefix Condition=" '$(VersionPrefix)'=='' ">0.0.2</VersionPrefix>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugType>Full</DebugType>
+    <VersionSuffix>dev</VersionSuffix>
+  </PropertyGroup>
+
+  <!-- Shared Package Versions -->
+  <PropertyGroup>
+    <!-- System packages -->
+
+    <!-- Copren packages -->
+    <Copren_Net>0.0.2</Copren_Net>
+
+    <!-- 3rd party packages -->
+    <Microsoft_Extensions_DependencyInjection>2.0.0</Microsoft_Extensions_DependencyInjection>
+    <ProtoBuf_Net>2.3.3</ProtoBuf_Net>
+
+    <!-- Test related packages -->
+
+    <!-- Tooling related packages -->
+    <SourceLinkVersion>2.8.3</SourceLinkVersion>
+  </PropertyGroup>
+
+  <!-- Set output folder for created NuGet packages -->
+  <PropertyGroup>
+    <PackageOutputPath Condition=" '$(PackageOutputPath)'=='' ">$(SourceRoot)/Artifacts/$(Configuration)</PackageOutputPath>
+  </PropertyGroup>
+</Project>
